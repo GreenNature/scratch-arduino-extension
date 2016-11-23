@@ -571,15 +571,10 @@
       ['h', 'when pin %n is %m.outputs', 'whenDigitalRead', 1, 'on'],
       ['b', 'pin %n on?', 'digitalRead', 1],
       ['-'],
-      ['h', 'when analog %n %m.ops %n%', 'whenAnalogRead', 1, '>', 50],
-      ['r', 'read analog %n', 'analogRead', 0],
+      //['h', 'when analog %n %m.ops %n%', 'whenAnalogRead', 1, '>', 50],
+      //['r', 'read analog %n', 'analogRead', 0],
       ['-'],
-      ['r', 'asfmap %n from %n %n to %n %n', 'mapValues', 50, 0, 100, -240, 240],
-      ['-'],
-      ['-'],
-      ['-'],
-      ['-'],
-      ['r', 'Run motion %n', 'runMotion', 0]
+      ['r', 'asfmap %n from %n %n to %n %n', 'mapValues', 50, 0, 100, -240, 240]
     ],
     de: [
       ['h', 'Wenn Arduino verbunden ist', 'whenConnected'],
