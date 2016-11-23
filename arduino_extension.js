@@ -575,7 +575,7 @@
       ['b', 'pin %n on?', 'digitalRead', 1],
       ['-'],
       ['h', 'when analog %n %m.ops %n%', 'whenAnalogRead', 1, '>', 50],
-      ['r', 'read analog %n', 'analogRead', 0],
+      ['r', 'hey read analog %n', 'analogRead', 0],
       //['-'],
       [' ', 'Run motion %n', 'runMotion', 0]
       //['-'],
