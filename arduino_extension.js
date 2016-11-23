@@ -485,12 +485,7 @@
     else
       return { status:2, msg:'Connected' };
   };
-  
-  ext.runMotion = function(motionNumber) {
-    var output = motionNumber;
-      return output;
-  };
-  
+
   ext._deviceRemoved = function(dev) {
     console.log('Device removed');
     // Not currently implemented with serial devices
@@ -1103,7 +1098,7 @@
     blocks: blocks[lang],
     menus: menus[lang],
     url: 'http://khanning.github.io/scratch-arduino-extension'
-  }
+  };
 
   ScratchExtensions.register('Arduino', descriptor, ext, {type:'serial'});
 
