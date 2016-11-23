@@ -485,6 +485,18 @@
     else
       return { status:2, msg:'Connected' };
   };
+  
+  ext.runMotion = function(motionNumber) {
+      return "motinoNumber : " + motionNumber;
+  };
+
+  // Block and block menu descriptions
+  var descriptor = {
+      blocks: [
+          // Block type, block name, function name, param1 default value, param2 default value
+          ['r', 'run motion %n', 'runMotion', 0],
+      ]
+  };
 
   ext._deviceRemoved = function(dev) {
     console.log('Device removed');
