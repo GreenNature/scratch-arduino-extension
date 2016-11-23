@@ -574,7 +574,11 @@
       ['h', 'when analog %n %m.ops %n%', 'whenAnalogRead', 1, '>', 50],
       ['r', 'read analog %n', 'analogRead', 0],
       ['-'],
-      ['r', 'map %n from %n %n to %n %n', 'mapValues', 50, 0, 100, -240, 240],
+      ['r', 'asfmap %n from %n %n to %n %n', 'mapValues', 50, 0, 100, -240, 240],
+      ['-'],
+      ['-'],
+      ['-'],
+      ['-'],
       ['r', 'Run motion %n', 'runMotion', 0]
     ],
     de: [
