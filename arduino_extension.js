@@ -480,12 +480,8 @@
   };
 
   ext.runMotion = function(motionNumber) {
-    /*
-    var output = motionNumber;
-    return Math.round(output);
-    */
   };
-
+  
   ext._getStatus = function() {
     if (!connected)
       return { status:1, msg:'Disconnected' };
@@ -576,7 +572,7 @@
       ['-'],
       ['h', 'when analog %n %m.ops %n%', 'whenAnalogRead', 1, '>', 50],
       ['r', 'hey read analog %n', 'analogRead', 0],
-      //['-'],
+      ['-'],
       [' ', 'Run motion %n', 'runMotion', 0],
       ['-'],
       ['r', 'map %n from %n %n to %n %n', 'mapValues', 50, 0, 100, -240, 240]
