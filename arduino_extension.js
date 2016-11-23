@@ -479,16 +479,16 @@
     return Math.round(output);
   };
 
+  ext.runMotion = function(motionNumber) {
+    var output = motionNumber;
+    return Math.round(output);
+  };
+  
   ext._getStatus = function() {
     if (!connected)
       return { status:1, msg:'Disconnected' };
     else
       return { status:2, msg:'Connected' };
-  };
-  
-  ext.runMotion = function(motionNumber){
-    //return "motion Number : " + motionNumber;
-    return;
   };
 
   ext._deviceRemoved = function(dev) {
