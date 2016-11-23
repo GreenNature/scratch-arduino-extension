@@ -575,8 +575,7 @@
       ['h', 'when analog %n %m.ops %n%', 'whenAnalogRead', 1, '>', 50],
       ['r', 'read analog %n', 'analogRead', 0],
       ['-'],
-      ['r', 'map %n from %n %n to %n %n', 'mapValues', 50, 0, 100, -240, 240],
-      ['r', 'run motion %n', 'runMotion', 0]
+      ['r', 'map %n from %n %n to %n %n', 'mapValues', 50, 0, 100, -240, 240]
     ],
     de: [
       ['h', 'Wenn Arduino verbunden ist', 'whenConnected'],
@@ -721,8 +720,7 @@
       ['h', '아날로그 %n 번 핀의 값이 %m.ops %n% 일 때', 'whenAnalogRead', 1, '>', 50],
       ['r', '아날로그 %n 번 핀의 값', 'analogRead', 0],
       ['-'],
-      ['r', '%n 을(를) %n ~ %n 에서 %n ~ %n 의 범위로 바꾸기', 'mapValues', 50, 0, 100, -240, 240],
-      ['r', 'run motion %n', 'runMotion', 0]
+      ['r', '%n 을(를) %n ~ %n 에서 %n ~ %n 의 범위로 바꾸기', 'mapValues', 50, 0, 100, -240, 240]
     ],
     nb: [
       ['h', 'når enheten tilkobles', 'whenConnected'],
