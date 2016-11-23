@@ -487,7 +487,8 @@
   };
   
   ext.runMotion = function(motionNumber){
-    return "motion Number : " + motionNumber;
+    //return "motion Number : " + motionNumber;
+    return;
   };
 
   ext._deviceRemoved = function(dev) {
