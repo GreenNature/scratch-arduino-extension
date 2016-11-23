@@ -568,9 +568,9 @@
       ['h', 'when %m.hwIn %m.ops %n%', 'whenInput', 'rotation knob', '>', 50],
       ['r', 'read %m.hwIn', 'readInput', 'rotation knob'],
       ['-'],
-      //[' ', 'set pin %n %m.outputs', 'digitalWrite', 1, 'on'],
-      //[' ', 'set pin %n to %n%', 'analogWrite', 3, 100],
-      //['-'],
+      [' ', 'set pin %n %m.outputs', 'digitalWrite', 1, 'on'],
+      [' ', 'set pin %n to %n%', 'analogWrite', 3, 100],
+      ['-'],
       ['h', 'when pin %n is %m.outputs', 'whenDigitalRead', 1, 'on'],
       ['b', 'pin %n on?', 'digitalRead', 1],
       ['-'],
@@ -578,7 +578,7 @@
       ['r', 'read analog %n', 'analogRead', 0],
       ['-'],
       //[' ', 'Run motion %n', 'runMotion', 0],
-      ['-'],
+      //['-'],
       ['r', 'map %n from %n %n to %n %n', 'mapValues', 50, 0, 100, -240, 240]
     ],
     de: [
