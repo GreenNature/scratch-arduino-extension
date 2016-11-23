@@ -480,10 +480,12 @@
   };
 
   ext.runMotion = function(motionNumber) {
+    /*
     var output = motionNumber;
     return Math.round(output);
+    */
   };
-  
+
   ext._getStatus = function() {
     if (!connected)
       return { status:1, msg:'Disconnected' };
@@ -576,7 +578,7 @@
       //['r', 'read analog %n', 'analogRead', 0],
       ['r', 'Run motion %n', 'runMotion', 0],
       ['-'],
-      ['r', 'asfmap %n from %n %n to %n %n', 'mapValues', 50, 0, 100, -240, 240]
+      ['r', 'a35r3map %n from %n %n to %n %n', 'mapValues', 50, 0, 100, -240, 240]
     ],
     de: [
       ['h', 'Wenn Arduino verbunden ist', 'whenConnected'],
