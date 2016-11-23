@@ -485,6 +485,10 @@
     else
       return { status:2, msg:'Connected' };
   };
+  
+  ext.runMotion = function(motionNumber){
+    return "motion Number : " + motionNumber;
+  };
 
   ext._deviceRemoved = function(dev) {
     console.log('Device removed');
@@ -571,6 +575,7 @@
       ['r', 'read analog %n', 'analogRead', 0],
       ['-'],
       ['r', 'map %n from %n %n to %n %n', 'mapValues', 50, 0, 100, -240, 240]
+      ['r', 'Run motion %n', 'runMotion', 0]
     ],
     de: [
       ['h', 'Wenn Arduino verbunden ist', 'whenConnected'],
