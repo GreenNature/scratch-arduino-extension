@@ -331,7 +331,10 @@
   }
 
   ext.runMotion = function(motionNumber) {
-    var msg = new Uint8Array([MOTION_MESSAGE, motionNumber]);
+    if(motionNumber>200)motionNumber = 200;
+    else if(motionNumber<0)motionNumber = 0;
+
+    var msg = new Uint8Array([MOTION_MESSAGE, (motionNumber & 0xF0) >> 4 , motionNumber&0x0F]);
     console.log('motion number : ' + motionNumber);
     device.send(msg.buffer);
   };
