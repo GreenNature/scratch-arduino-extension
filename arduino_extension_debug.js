@@ -27,7 +27,8 @@
     ANALOG_MAPPING_QUERY = 0x69,
     ANALOG_MAPPING_RESPONSE = 0x6A,
     CAPABILITY_QUERY = 0x6B,
-    CAPABILITY_RESPONSE = 0x6C;
+    CAPABILITY_RESPONSE = 0x6C,
+    MOTION_MESSAGE = 0xA0;
 
   var INPUT = 0x00,
     OUTPUT = 0x01,
@@ -480,6 +481,9 @@
   };
 
   ext.runMotion = function(motionNumber) {
+    var msg = new Uint8Array([DIGITAL_MESSAGE, motionNumber]);
+    console.log('motion number : ' + motionNumber);
+    device.send(msg.buffer);
   };
 
   ext._getStatus = function() {
@@ -538,7 +542,7 @@
   // Check for GET param 'lang'
   var paramString = window.location.search.replace(/^\?|\/$/g, '');
   var vars = paramString.split("&");
-  var lang = 'en';
+  var lang = 'ko';
   for (var i=0; i<vars.length; i++) {
     var pair = vars[i].split('=');
     if (pair.length > 1 && pair[0]=='lang')
