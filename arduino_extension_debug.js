@@ -330,6 +330,12 @@
     device.send(msg.buffer);
   }
 
+  ext.runMotion = function(motionNumber) {
+    var msg = new Uint8Array([MOTION_MESSAGE, motionNumber]);
+    console.log('motion number : ' + motionNumber);
+    device.send(msg.buffer);
+  };
+
   function rotateServo(pin, deg) {
     if (!hasCapability(pin, SERVO)) {
       console.log('ERROR: valid servo pins are ' + pinModes[SERVO].join(', '));
@@ -478,12 +484,6 @@
   ext.mapValues = function(val, aMin, aMax, bMin, bMax) {
     var output = (((bMax - bMin) * (val - aMin)) / (aMax - aMin)) + bMin;
     return Math.round(output);
-  };
-
-  ext.runMotion = function(motionNumber) {
-    var msg = new Uint8Array([DIGITAL_MESSAGE, motionNumber]);
-    console.log('motion number : ' + motionNumber);
-    device.send(msg.buffer);
   };
 
   ext._getStatus = function() {
